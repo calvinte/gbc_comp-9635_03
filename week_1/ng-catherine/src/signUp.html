@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	  	<meta charset="utf-8">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  	<title>Bootstrap Example</title>  
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+		<script src="script.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+
+	<body>
+<div class="container-fluid">
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1">
+          <a href="home.html">
+            <img src="images/lambSOTW_R_000.jpg" alt="lamb" id="lamb">
+          </a>
+        </div>
+        <div class="col-sm-5">
+          <h3>Saviour of the World Chinese Catholic Church</h3>
+        </div>
+        <div class="col-sm-6" id="contact">
+          <h4>905-568-8939</h4>
+          <p>30 Bristol Road West, Mississauga, ON, Canada L5R 3K3</p>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Saviour of the World</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="#">Our Parish</a></li>
+          <li><a href="#">Parish Groups</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Links</a></li>
+          <li><a href="#">Contact Us</a></li>        
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="signUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+		<div id="login" class="container">
+			<h2>Account Information</h2>
+
+			<div class="form-group">
+				<label for="firstname" class="control-label ">First Name:</label>
+				<input class="form-control" type="text" id="firstname" placeholder="First Name" value="Catherine"><span id="firstnameErr"></span>
+			</div>
+			
+			<div class="form-group">
+				<label for="lastname" class="control-label ">Last Name:</label>
+				<input class="form-control" type="text" id="lastname" placeholder="Last Name" value="Ng"><span id="lastnameErr"></span>
+			</div>
+			
+			<div class="form-group">
+				<label for="email" class="control-label ">Email:</label>
+				<input class="form-control" type="text" id="email" placeholder="email" value="abc@123.com"><span id="emailErr"></span>
+			</div>
+			
+			<div class="form-group">
+				<label for="address" class="control-label ">Address:</label>
+				<input class="form-control" type="text" id="address" placeholder="address" value="123 Salmon Run, Toronto, ON"><span id="addressErr"></span>
+			</div>
+			
+			<div class="form-group">
+				<label for="postal" class="control-label ">Postal Code:</label>
+				<input class="form-control" type="text" id="postal" placeholder="example: M1A 2B3" value="M1A 2B3"><span id="postalErr"></span>
+			</div>
+			
+			<div class="form-group">
+				<label for="phone" class="control-label ">Phone number:</label>
+				<input class="form-control" type="text" id="phone" placeholder="XXX-XXX-XXXX" value="123-456-7890"><span id="phoneErr"></span>
+			</div>
+			
+			<div class="form-group">
+				<label for="password" class="control-label ">Password:</label>
+				<input class="form-control" type="password" id="password" placeholder="should contain one special character, one number and one upper case character" value="Abcdef123**"><span id="passwordErr"></span>
+			</div>
+			
+			<div class="form-group">
+				<label for="passwordCfm" class="control-label ">Confirm Password:</label>
+				<input class="form-control" type="password" id="passwordCfm" placeholder="repeat same password" value="Abcdef123**"><span id="passwordCfmErr"></span>
+			</div>
+
+			<div class="form-group">
+				<button id="btnReg" class="btn btn-primary">Save</button>
+			</div>
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+
+</html>

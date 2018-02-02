@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+	  	<meta charset="utf-8">
+	  	<meta name="viewport" content="width=device-width, initial-scale=1">
+	  	<title>Bootstrap Example</title>  
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+		<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+		<script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+		<script src="script.js"></script>
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
+
+	<body>
+<div class="container-fluid">
+  <header>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-1">
+          <a href="home.html">
+            <img src="images/lambSOTW_R_000.jpg" alt="lamb" id="lamb">
+          </a>
+        </div>
+        <div class="col-sm-5">
+          <h3>Saviour of the World Chinese Catholic Church</h3>
+        </div>
+        <div class="col-sm-6" id="contact">
+          <h4>905-568-8939</h4>
+          <p>30 Bristol Road West, Mississauga, ON, Canada L5R 3K3</p>
+        </div>
+      </div>
+    </div>
+
+    <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Saviour of the World</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="#">Our Parish</a></li>
+          <li><a href="#">Parish Groups</a></li>
+          <li><a href="#">Gallery</a></li>
+          <li><a href="#">Links</a></li>
+          <li><a href="#">Contact Us</a></li>        
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="signUp.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+
+		<div id="posting" class="container">
+			<h2>Announcement Posting</h2>
+
+			<div class="form-group">
+				<label for="title1" class="control-label ">Title:</label>
+				<input class="form-control" type="text" id="title1" placeholder="Title of Announcement" value="Hello World!"><span id="title1Err"></span>
+			</div>
+			
+			<div class="form-group">
+				<label for="date" class="control-label ">Date:</label>
+				<input class="form-control" type="text" id="date" placeholder="Date of Posting" value="01-31-2018"><span id="dateErr"></span>
+			</div>
+			
+			<div class="form-group">
+				<label for="content" class="control-label ">Content:</label>
+				<input class="form-control" type="text" id="content" placeholder="Type your content here" value="blaa blaa blaa"><span id="contentErr"></span>
+			</div>
+			
+			<div class="form-group">
+				<button id="btnPost" class="btn btn-primary">Submit</button>
+			</div>
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</body>
+
+</html>

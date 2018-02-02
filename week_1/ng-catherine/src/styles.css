@@ -1,0 +1,24 @@
+#lamb {
+	width: 100%;
+}
+
+
+
+#contact {
+	text-align: right;
+}
+
+.navbar {
+	margin: 0;
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+#cover {
+	background-color: #333333;
+	padding-bottom: 20px;
+	color: white;
+}
+
