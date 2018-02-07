@@ -1,4 +1,10 @@
 #map-canvas{
+	height:300px;
+	width:400px;
+}
+
+#info-window {
 	height: 300px;
 	width: 400px;
+	background-color:grey;
 }
