@@ -1,4 +1,4 @@
-console.log(google);
+//console.log(google);
 google.maps.event.addDomListener(window, 'load', function(){
   //console.log('page is loaded');
 
@@ -25,7 +25,7 @@ google.maps.event.addDomListener(window, 'load', function(){
           if (this.readyState == 4 && this.status == 200) {
             var obj = JSON.parse(this.responseText);
             document.getElementById("demo").innerHTML = "Location Address:" + obj.results[0].formatted_address;
-            console.log(obj);
+            //console.log(obj);
           }
         };
         xhttp.open("GET", "https://maps.googleapis.com/maps/api/geocode/json?latlng="+lat+","+lng+"&key=AIzaSyDEZaZXA6vU2TMoN04fMLgYybvfJ4Jp_9w", true);
