@@ -1,0 +1,128 @@
+
+
+body{
+	background-color: #F4F4F4;
+	color: #DCD0C0;
+	padding: 2em;
+}
+
+
+
+h1, h2, h3, h4, h5, h6{
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+	color: #C0B283;
+
+}
+
+
+p{
+	font-family: Geneva, Tahoma, Verdana, sans-serif;
+	font-size: 1rem;
+}
+
+
+
+
+img.center {
+  display: block;
+   margin-left: auto;
+   margin-right: auto;
+}
+
+hr{
+	display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: solid;
+    border-width: 1px;
+	background-color: #DCD0C0;
+}
+
+iframe {
+ width: 300px; 
+ height: 80px;
+
+
+}
+
+
+.headingText{
+	color: #373737;
+}
+
+.container{
+	width: 80%;
+}
+
+.box{
+	background-color: #373737;
+	padding: 1.5em;
+
+}
+
+
+
+@media (max-width: 576px) { 
+			h1{
+        font-size:1.2em;
+		text-align: center;
+    }
+	h3{
+		font-size: 1em;
+		text-align: center;
+	}
+	
+	p,ul{
+	font-size: 0.8em;}
+	
+
+
+	iframe {
+ max-width: 80px; 
+ height: 80px;
+}
+
+}
+
+
+@media (max-width: 768px) {
+	h3{
+		text-align: center;
+	}
+	
+		img{
+width: 50%; 
+height: auto;
+padding-top: 10px;
+padding-bottom: 10px;}
+
+		iframe {
+ width: 300px; 
+ height: 80px;
+}
+
+}
+	
+	
+
+
+
+
+@media (min-width: 992px) { 
+ }
+
+@media (max-width: 1200px) {
+
+			
+			iframe {
+ width: 220px; 
+ height: 80px;
+}
+
+
+	
+}
