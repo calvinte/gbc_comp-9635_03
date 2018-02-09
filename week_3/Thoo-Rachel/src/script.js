@@ -10,24 +10,34 @@ google.maps.event.addDomListener(window, 'load', function(){
 	var map = new google.maps.Map(mapEl, mapOptions)
 
 	var myPlaces =[{
-	content: "Tokyo, Japan:" +"<br> "+ "<br>" +"Sushi, Ramen, Deep fried maple leaves",
+	name:'<h2>Tokyo, Japan</h2>',
+	description: '<p>Sushi, Ramen, Deep fried maple leaves</p>',
+	image: '<img height="100" src="https://upload.wikimedia.org/wikipedia/en/thumb/9/9e/Flag_of_Japan.svg/1280px-Flag_of_Japan.svg.png">',
 	lat:35.7,
 	lng:139.7,
-	//image: <img height="100" src="https://img.grouponcdn.com/deal/fmPws6o2uTweCftZu7yj/p4-2048x1229/v1/c700x420.jpg">
+	
 },{
-	content: "Paris, France:" +"<br> "+ "<br>" +"Crossant, Macaroon, Wine",
+	name: "<h2>Paris, France</h2>", 
+	description:"<p>Crossant, Macaroon, Wine</p>",
+	image: '<img height="100" src="http://flagpedia.net/data/flags/normal/fr.png">',
 	lat:48.85,
 	lng:2.35,
 }, {
-	content: "Barcelona, Spain:" +"<br> "+ "<br>" +"Paella, Creme Catalana, Tapas",
+	name: "<h2>Barcelona, Spain</h2>", 
+	description:"<p>Paella, Creme Catalana, Tapas</p>",
+	image: '<img height="100" src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Spain_flag_300.png">',
 	lat:41.38,
 	lng:2.17,
 },{
-	content: "Los Angeles, California:" +"<br> "+ "<br>" +"Dodger Dog, Smoked Salmon Pizza, Miso Black Cod",
+	name: "<h2>Los Angeles, California</h2>", 
+	description:"<p>Dodger Dog, Smoked Salmon Pizza, Miso Black Cod</p>",
+	image: '<img height="100" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png">',
 	lat:41.51,
 	lng:-87.65,
 },{
-	content: "Brooklyn, New York:" +"<br> "+ "<br>" +"Deep Dish Pizza, New York Bagel, New York Cheesecake",
+	name: "<h2>Chicago, New York</h2>", 
+	description:"<p>Deep Dish Pizza, New York Bagel, New York Cheesecake</p>",
+	image: '<img height="100" src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1280px-Flag_of_the_United_States.svg.png">',
 	lat:40.67,
 	lng:-73.94,
 }]
@@ -41,7 +51,7 @@ myPlaces.forEach(function(place){
 		position: latLng, 
 	})
 	var infowindow = new google.maps.InfoWindow({
-    content: place.content,
+    content: place.name + place.image +place.description,
   })
 
 	google.maps.event.addListener(marker,"click", function ClickHandler(){
