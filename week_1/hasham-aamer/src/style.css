@@ -1,0 +1,115 @@
+.container-fluid{
+	
+	padding-top: 25px;
+	padding-bottom: 70px;
+	
+}
+
+
+.main-fill{
+	background-color: #EFEBD2;
+}
+
+
+.main-section {
+
+
+	background-image: url('images/Ocean.jpg');
+	background-size: cover;
+	/*max-width: 800px;*/
+	padding-bottom: 200px;
+
+	background-repeat: no-repeat;
+
+}
+.text-center
+
+{
+	text-align: center;
+	
+}
+
+.fa-volume-control-phone,.fa-envelope{
+	font-size: 200%;
+	
+}
+
+.div-center
+
+{
+	text-align: center;
+	
+}
+.align-content-text{
+
+	padding-left: 75px;
+	padding-right:75px;
+
+}
+.text-vertalign
+
+{
+	margin-bottom: 40px;
+}
+
+
+	.bg-1{
+
+		background-color: #1abc9c;
+		color:black;
+	}
+
+
+	.bg-2{
+		background-color: #474e5d; 
+		color:white;
+		
+	}
+
+	.bg-3{
+
+		background-color: #7a9ea6;
+		color: white;
+	}
+
+	.bg-4{
+
+		background-color:rgb(47, 47, 47);
+		color: white;
+
+	}
+
+@media screen and (max-width: 767px)
+
+{
+
+	
+	.main-section {
+		padding-top:0;
+		margin-top: -20px;
+		color: #332200;
+
+		
+	}
+
+	.fa-volume-control-phone,.fa-envelope{
+		
+		font-size: 150%;
+	}
+
+     .div-center
+		{
+			text-align: center;
+			
+		}
+}
+
+.navbar {
+
+	margin:0;
+}
+
+.navbar-right{
+	text-align:center;
+}
+

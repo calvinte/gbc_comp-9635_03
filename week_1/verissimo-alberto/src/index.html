@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <script>
+$(document).ready(function(){
+$("#msg").hide();
+  $("#btn").click(function(){
+      $("#msg").slideToggle();
+  })
+})
+  </script>
+  <style>
+body{font-family: 'Oswald', sans-serif;}
+#intro, #description{
+  font-size: 16px;
+}
+img{border:1px solid grey}
+.black{
+  color:white;
+  background-color: black;
+}
+#btn{
+  color:grey;
+}
+.container{
+
+  width:950px;
+}
+  </style>
+<title>About me</title>
+</head>
+
+<body>
+<section class="black">
+<div class="container container-fluid">
+  <h1>Alberto Verissimo</h1>
+<p id="intro">My name is Alberto, I am interested in front-end web development and
+  technologies such as <strong>HTML, CSS and Javascript</strong></p>
+</br>
+</div><!--container--></section>
+  <div class="container container-fluid">
+<h2>I am the guy with the guitar by the way</h2>
+<img class="jumbotron" src="http://toronto.hispanocity.com/sites/default/files/styles/noticia-slide-big/public/media/Noticias-11149-p18thrtbnmna7ft81k59i191s5n4.jpg?itok=liB7fKuv"/>
+</br>
+</br>
+<blockquote>
+  <p><em>My band is called TYD</em></p>
+</blockquote>
+</div><!--container-->
+
+  <section class="black">
+  <div class="container container-fluid">
+<h2>Now lets talk about me</h2>
+<div class="row">
+<img class="col-sm-4" src="http://www.adworld.ie/wp-content/uploads/2018/01/media.png" alt="media"/>
+<p id="description" class="col-sm-4">I like playing the guitar and learning everything related to technology, before coming to George brown I did some other kind of things
+related to media such as: <strong>graphic design, digital design, vido editing and animation.</strong>
+</br>
+</br>
+</p>
+
+
+
+
+</div><!--row-->
+<div class="clearfix"></div>
+</br>
+  <button id="btn" class="btn .btn-default">Click me</button>
+
+  <div id="msg">This is my latest jQuery project:
+<a href="https://codepen.io/Albertin89/pen/GyWZOP" target=a_blank>Simon Game</a>
+  </div><!--msg-->
+</div><!--container-->
+</br>
+</section>
+
+</body>
+
+</html>

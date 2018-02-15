@@ -10,6 +10,7 @@ google.maps.event.addDomListener(window, 'load', function() {
    var map = new google.maps.Map(mapEl, mapOptions)
 
    var myPlaces = [{
+<<<<<<< HEAD
      content: 'Richmond Hill elementary school. The elementary school I attended.',
      lat: 43.862494,  
      lng: -79.405990,
@@ -31,6 +32,20 @@ google.maps.event.addDomListener(window, 'load', function() {
      lng: -79.396010,
    }
    ]
+=======
+     content: 'I like this place because I live here.',
+     lat: 43.6532,
+     lng: 79.3832,
+   }, {
+     content: 'This is another place',
+     lat: 4,
+     lng: 20,
+   }, {
+     content: 'This is also another place',
+     lat: 10,
+     lng: 10,
+   }]
+>>>>>>> 5222f8ed16b0a96d445083151c00dc80edbe373a
  
    myPlaces.forEach(function(place) {
      console.log(place.content)

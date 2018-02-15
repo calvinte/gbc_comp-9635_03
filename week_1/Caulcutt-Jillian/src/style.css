@@ -1,0 +1,57 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+.container {
+  margin: 0px auto;
+  background: url(./images.jpeg) center center;
+  background-size: cover;
+  height: 960px;
+}
+
+img {
+  float: left;
+  width: 200px;
+  height: 200px;
+  margin: 10px 80px 50px 80px;
+}
+
+h1 {
+  color: #fff;
+  line-height: 60px; 
+  font-size: 42px;
+  margin-top: 0;
+  padding-top: 20px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+    }
+
+ul{
+    float: left;
+}
+
+li {
+  font-size: 12pt;
+  padding-bottom: 10px;
+  }
+
+@media (min-width:1260px) {
+  h1 {
+    font-size: 80px;
+    line-height:100px;
+  }
+  img {
+    width:380px;
+    height: 380px;
+  }
+  li {
+  font-size: 16pt;
+  padding-bottom: 20px;
+  }
+}
