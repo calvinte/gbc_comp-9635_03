@@ -4,7 +4,7 @@ $.ajax({
 	dataType:"jsonp",
 	//jquery ajax data types
 	cache:false,
-	url:'https://api.foursquare.com/v2/venues/search?client_id=UYXWDL4J1XESVFDVL4IQS4FKZJVLMCOF0SKNRRWRBBSC0LPE&client_secret=IFYVZGRK3EVI4DF1JEND5ZHC1K15NP5GAZ3NKXPOVCELZQSL&v=20180212&near=Toronto&query=tacos',
+	url:'https://api.foursquare.com/v2/venues/search?client_id=UYXWDL4J1XESVFDVL4IQS4FKZJVLMCOF0SKNRRWRBBSC0LPE&client_secret=IFYVZGRK3EVI4DF1JEND5ZHC1K15NP5GAZ3NKXPOVCELZQSL&v=20180212&near=Toronto&query=dance',
 	success:function(response) {
 		//can be any name ^
 		response.response.venues.forEach(function(venue) {
@@ -19,10 +19,11 @@ $.ajax({
 			html += '&size=600x450'
 			html += '&maptype=roadmap'
 			html += '&center=' + location.lat +',' + location.lng
+			html += '&markers=' + encodeURIComponent('||') + location.lat + ',' + location.lng
 			html +='">'
 			html += '</p>'
 			document.body.innerHTML+= html
-		// javascript maps take time to load and develop, but image maps aare faster but not interactive
+		// javascript maps take time to load and develop, but image maps are faster but not interactive
 		})
 	},
 })
