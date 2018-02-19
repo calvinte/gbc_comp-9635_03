@@ -10,18 +10,20 @@ $.ajax({
 		response.response.venues.forEach(function(venue) {
 			console.log(venue)
 			var location = venue.location
-			var html = '<p>'
+			var html = '<div>'
+			html += '<p>'
 			html += venue.name
-			html +='<br />'
+			html += '<br />'
 			html += '<img src="'
 			html += 'https://maps.googleapis.com/maps/api/staticmap'
 			html += '?zoom=15'
-			html += '&size=600x450'
+			html += '&size=400x250'
 			html += '&maptype=roadmap'
 			html += '&center=' + location.lat +',' + location.lng
 			html += '&markers=' + encodeURIComponent('||') + location.lat + ',' + location.lng
 			html +='">'
-			html += '</p>'
+			html += '</p>' 
+			html += '</div>'
 			document.body.innerHTML+= html
 		// javascript maps take time to load and develop, but image maps are faster but not interactive
 		})
