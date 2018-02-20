@@ -1,9 +1,10 @@
 {
-  "name": "nguyen-lyna",
+  "name": "tennant-calvin",
   "version": "1.0.0",
-  "description": "Week 4",
+  "description": "Week 2 in-class presentation",
   "main": "index.js",
   "scripts": {
+    "start": "node index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
