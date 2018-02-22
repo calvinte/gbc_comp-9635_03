@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <title>Maria Levitsky</title>
+   <style>
+   p {
+     font-size: 20px;
+     color: CornflowerBlue;
+     font-family: verdana;
+     padding: 15px;
+   }
+   main {
+     text-align: center;
+     border: 3px solid DarkKhaki;
+     width: 100%;
+     border-radius: 20px;
+     background-image: url("https://n6-img-fp.akamaized.net/free-vector/damask-seamless-pattern-background_1217-821.jpg?size=338&ext=jpg");
+   }
+   #catpic {
+     width: 100%;
+     border-radius: 20px;
+   }
+   #emptybox {
+     height: 300px;
+     width: 300px;
+     color: black;
+   }
+   .catbutton {
+     border: 3px solid DarkKhaki;
+     padding: 20px;
+     font-family: verdana;
+     font-size: 15px;
+     color: CornflowerBlue;
+     background-color: white;
+     border-radius: 20px;
+   }
+   span {
+     background-color: white;
+   }
+   </style>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+   <script>
+   $(document).ready(function(){
+       $("#hide").click(function(){
+           $("#catpic").hide();
+       });
+       $("#show").click(function(){
+           $("#catpic").show();
+       });
+   });
+   </script>
+ </head>
+ <body>
+ <main>
+   <p><span>My name is Maria.  I am one class away from completing a
+   Web Developer's Certificate.</span>
+ </p>
+ <p>
+   <span>I'm excited to learn how to use Github.</span>
+ </p>
+ <p>
+   <span>I like ice-skating and cats.</span>
+</p>
+<button id="hide" class="catbutton">Hide Cat</button>
+<button id="show" class="catbutton">Show Cat</button>
+<img id="catpic" src="http://r.ddmcdn.com/s_f/o_1/cx_462/cy_245/cw_1349/ch_1349/w_720/APL/uploads/2015/06/caturday-shutterstock_149320799.jpg">
+
+  </main>
+ </body>
+</html>

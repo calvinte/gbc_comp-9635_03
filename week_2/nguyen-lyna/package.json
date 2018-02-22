@@ -1,0 +1,14 @@
+{
+  "name": "nguyen-lyna",
+  "version": "1.0.0",
+  "description": "Week 2 in-class presentation",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
