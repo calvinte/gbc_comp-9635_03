@@ -1,0 +1,18 @@
+#map-canvas{
+	height:300px;
+	width: 400px;
+}
+
+body{
+	background-color: #e3e0cf;
+		font-family: Palatino,Palatino Linotype,Palatino LT STD,Book Antiqua,Georgia,serif; 
+
+}
+
+h1{
+	color: #fff;
+}
+
+#myButton{
+	padding-top: 2vw;
+}

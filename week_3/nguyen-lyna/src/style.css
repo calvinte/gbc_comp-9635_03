@@ -1,0 +1,38 @@
+html, body, #travelled-map {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/*Style override*/
+.gm-style .gm-style-iw img {
+	display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding: 2em;
+}
+.gm-style .gm-style-iw h2 {
+	padding: 10px;
+	background-color: black;
+    color: #e80000;
+    text-align: center;
+    letter-spacing: 0.08em;
+}
+.gm-style .gm-style-iw p {
+	font-size: 18px;
+    margin: 10px 25px;
+    letter-spacing: 0.07rem;
+}
+
+.gm-style .gm-style-iw a {
+	color: #ff5454;
+	transition: ease all 0.3s;
+	text-decoration: none;
+	font-weight: 400;
+}
+
+.gm-style .gm-style-iw a:hover {
+	color: #e80000;
+}
