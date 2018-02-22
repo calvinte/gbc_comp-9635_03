@@ -1,6 +1,6 @@
 <DOCTYPE! html>
 <head>
-  <title>Week 3 LOCALHOST Google Maps Info Windows</title>
+  <title>Great Places to Visit Week 3</title>
   <link href="/style.css" rel="stylesheet">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDJKGAB2OpCfwDsFja73T4XxPTofmGDt1A&sensor=false"></script>
   <script src="script.js"></script>
