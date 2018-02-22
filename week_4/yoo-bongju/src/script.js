@@ -1,8 +1,13 @@
-$.ajax({
+
+function searchBtn() {
+    var cityName = document.getElementById("searchCity").value;
+    var storeName = document.getElementById("searchStore").value;
+
+	$.ajax({
 	type: "GET",
 	dataType: "jsonp",
 	cache: false,
-	url: "https://api.foursquare.com/v2/venues/search?client_id=UYXWDL4J1XESVFDVL4IQS4FKZJVLMCOF0SKNRRWRBBSC0LPE&client_secret=IFYVZGRK3EVI4DF1JEND5ZHC1K15NP5GAZ3NKXPOVCELZQSL&v=20180212&near=Toronto&query=tacos",
+	url: "https://api.foursquare.com/v2/venues/search?client_id=UYXWDL4J1XESVFDVL4IQS4FKZJVLMCOF0SKNRRWRBBSC0LPE&client_secret=IFYVZGRK3EVI4DF1JEND5ZHC1K15NP5GAZ3NKXPOVCELZQSL&v=20180212&near="+cityName+"&query="+storeName+"",
 	success: function(response) {
 		//console.log(response)
 		response.response.venues.forEach(function(venue) {
@@ -22,5 +27,8 @@ $.ajax({
 			html += '</p>'
 			document.body.innerHTML += html
 		})
-	},
-})
+	}
+});
+
+
+} // searchBtn Ends
