@@ -1,0 +1,12 @@
+html, body, #places-map {
+background: lavender;
+height: 100%;
+margin: 0;
+font-family: 'Libre Baskerville', serif;
+padding: 0;
+width: 100%;
+
+}
+p {
+  /*color:red;*/
+}

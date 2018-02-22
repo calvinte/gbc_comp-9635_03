@@ -1,0 +1,171 @@
+/*!
+ * Start Bootstrap - Simple Sidebar (https://startbootstrap.com/template-overviews/simple-sidebar)
+ * Copyright 2013-2017 Start Bootstrap
+ * Edits by Lyna Nguyen
+ * Github: https://github.com/WebDevLyna/gbc_comp-9635_03
+ */
+
+body {
+  overflow-x: hidden;
+  background-color: #EDEDED !important;
+  font-family: 'Roboto', sans-serif;
+  font-size: 2rem;
+}
+
+h1, h2, ul.social-media-icons {
+  margin: 3rem 0;
+  padding: 0;
+}
+
+/*---- Main Wrapper ----*/
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#wrapper.toggled { padding-left: 250px; }
+
+/*---- Side bar ----*/
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  background: #000;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#wrapper.toggled #sidebar-wrapper { width: 250px; }
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.sidebar-nav {
+  text-indent: 20px;
+  line-height: 40px;
+}
+
+#sidebar-wrapper h1 { margin: 5rem 0 0 2px; }
+
+/* Image - Fade effect */
+img.profile {
+  margin: 7rem 0;
+  width: 80%;
+  transition: all 1s ease;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 0.5rem solid rgba(255,255,255,0.2);
+}
+img.profile:hover {
+  width: 85%;
+  opacity: 0.75;
+}
+
+h2.title {
+  margin: 0 25px 0 5px;
+  text-align: center;
+  color: #b2b2b2;
+}
+h3.city { margin: 3rem; }
+
+
+/*---- Page Content ----*/
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+
+
+h1.text-primary { color: red; }
+
+.text-primary span {
+  border: 1px solid red;
+  color: #fff;
+  border-radius: 3px;
+}
+.text-primary span.nutshell {
+  border: 1px solid black;
+  color: #000;
+}
+
+/*Selection color & highlight*/
+::selection {
+  background: red;
+  color: #fff;
+}
+
+a.email {
+  color: #fff;
+  transition: ease all 0.3s;
+}
+a.email:hover {
+  color: red;
+  text-decoration: none;
+}
+
+
+/*Bootstrap button*/
+a.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn-resume,
+#menu-toggle {
+    font-size: 2rem;
+    color: #fff;
+    background-color: red;
+    border-radius: 7px;
+    padding: 1.5rem 5rem;
+    transition: all 0.5s ease;
+}
+.btn-resume:hover,
+#menu-toggle:hover {
+  color: #fc7171;
+  background-color: #fc7171;
+}
+a.btn.btn-resume, #menu-toggle { color: #fff; }
+a.btn.btn-resume:hover, #menu-toggle:hover { color: #000; }
+
+
+/*Social Media*/
+ul.social-media-icons, div.container .btn-resume {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*Font Awesome Icon*/
+.fa { color: red; }
+.fa:hover { color: #fc7171; }
+
+
+
+/*---- Media Queries ----*/
+@media screen and (max-width: 312px) {
+  h1.text-primary {
+    font-size: 3rem;
+  }
+  p {
+    font-size: 1.67rem;
+  }
+}
+
+

@@ -1,5 +1,25 @@
 #map-canvas{
 
-  width:300px;
-  height:400px;
+	/*
+  margin-top:100px;
+  margin-left:300px;
+  	*/
+
+  width: 300px;
+  height: 400px;
+  display: inline-block;
+
+}
+
+
+.container-fluid {
+	background-color:#DDD1CF;
+	
+
+}
+
+.div-center {
+
+	text-align:center;
+
 }
