@@ -1,7 +1,7 @@
 {
   "name": "nguyen-lyna",
   "version": "1.0.0",
-  "description": "Week 4 - FourSquare",
+  "description": "Week 5 - Final Project",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
