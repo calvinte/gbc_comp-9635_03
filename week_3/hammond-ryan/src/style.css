@@ -1,0 +1,22 @@
+html, body, #wonders-map {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+.info {
+	float:left; 
+	width:300px;
+	padding: 10px;
+}
+
+.photo {
+	float:right; 
+	width:250px;
+	padding: 25px;
+}
+
+.photo img {
+	width: 250px;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+<style type="text/css">
+			h1{ color: pink; 
+				font-size: 40px;
+				font-family: arial;
+				font-weight: bold;
+				background-color: purple;
+			}
+			
+			p{ font-family: helvetica; 
+			}
+			
+			h2{font-size: 22px;
+				font-family: 'Slabo 27px', serif;
+			}
+
+			body{ 
+				text-align: center;
+				}
+			
+			.container{
+				width:1040px;
+  				margin:0 auto;
+  				border: solid purple 1px;
+  				padding: 40px;
+			}
+
+			.title{
+			  margin-bottom: 45px;
+			  margin-top: 20px;
+			  cursor:pointer;
+			}
+
+			img{
+			  display: none;
+			  width: 1000px;
+			}
+
+			button { margin-bottom: 15px; }
+
+</style>			
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+    $("#hide").click(function(){
+        $("img").hide();
+    });
+    $("#show").click(function(){
+        $("img").show();
+    });
+});
+</script>
+</head>
+<body>
+
+	<div class="container">
+		<h1> My name : Celine Aumas</h1>
+
+
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
+			<h2> I DO NOT KNOW WHAT TO SAY</h2>
+
+				<P> Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
+
+
+			<h2> I WANT TO GO TO THE SUN PRETTY BAD AND REMEMBER WHAT WARMTH IS LIKE </h2>
+				<P class="title"> Somewhere like below</P>
+
+				<button id="hide">Hide</button>
+				<button id="show">Show</button>
+ 					<img src="https://www.mrandmrssmith.com/wanderlist/images/tulum-mexico/HERO.jpg" >
+
+
+		</div>
+
+
+
+
+
+
+
+</body>
+</html>

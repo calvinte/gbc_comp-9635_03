@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow');
+
+#map-canvas{
+  height: 300px;
+  width: 400px;
+  border: 1px solid black;
+  margin: 0 auto 0 auto;
+  margin-top: 100px;
+
+
+}
+
+.container{
+  width:1040px;
+  background-color: #FFF4EA;
+  margin:0 auto;
+  padding-bottom: 100px;
+}
+
+h1{
+  font-family: 'PT Sans Narrow', sans-serif;
+  text-align: center;
+}
