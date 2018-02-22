@@ -1,0 +1,71 @@
+html, body {
+    height: 100%;
+    background-color: #e9e9e9;
+}
+
+h1, h2, h3 {
+	color:#FFFF00;
+}
+
+p {
+	color: #fff;
+}
+
+a {
+	color: #D1D1FF;
+	font-weight: bold;
+}
+
+.container {
+	width: 1024px;
+	height: 100%;
+	margin: 0 auto;
+	background-color: #595959;
+	padding: 30px 20px 10px 20px;
+	border-top: 5px solid #FFFF00;
+	font-family: 'Roboto', sans-serif;
+}
+
+.about {
+	width: 35%;
+	float: left;
+	text-align: center;
+}
+
+.info {
+	width: 65%;
+	float: left;
+}
+
+img {
+	border: 5px solid #fff;
+    border-radius: 4px;
+    padding:0;
+    width: 200px;
+}
+
+.ryan {
+	border-radius: 50%;
+}
+
+.who {
+	font-size: 24px;
+	margin-bottom: 2px;
+}
+
+.title {
+	font-size: 18px;
+	color: #fff;
+	margin-top: 0;
+}
+
+.miniBio {
+	color:#FFFF00;
+	font-size: 16px; 
+}
+
+#noRyan {
+	display:none;
+	color:#FFFF00;
+	font-size: 150px;
+}
