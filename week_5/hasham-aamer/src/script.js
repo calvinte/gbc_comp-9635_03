@@ -1,4 +1,5 @@
 console.log("Testing");
+
 $(document).ready(function(){
   var element=document.getElementById('foursquare-map')
   var options={
@@ -31,7 +32,7 @@ $(document).ready(function(){
           infowindow.open(map,marker)
         })
 
-        
+
 
       })
     }
