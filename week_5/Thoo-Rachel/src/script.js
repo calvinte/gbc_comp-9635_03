@@ -13,11 +13,33 @@ $(document).ready(function(){
 		success:function(response){
 			console.log (response)
 			response.response.venues.forEach(function(venue){
-				var latLng = new google.maps.LatLng(venue.location.lat,venue.location.lng)
+				var venueLatLng = new google.maps.LatLng(venue.location.lat,venue.location.lng)
 				var marker = new google.maps.Marker({
 					map:map,
-					position: latLng,
+					position: venueLatLng,
 				})
+				var infowindow = new google.maps.InfoWindow({
+					content: venue.name, 
+
+				})
+				google.maps.event.addListener(marker,"click", function ClickHandler(){
+					map.setCenter(marker.position)
+					map.setZoom(10)
+					infowindow.open(map, marker)
+				})
+				var nextVenueLatLng = new google.maps.LatLng (venue.location.lat,venue.location.lng)
+				var marker2 = new google.maps.Marker({
+					map: map,
+					positions: nextVenueLatLng,
+				})
+				google.maps.event.addListener(marker2,'click', function ClickHandler(){
+						infowindow.close(marker)
+						map.setCenter(marker2.position)
+						map.setZoom(10)
+						infowindow.open(map,marker2)
+				})
+				
+				google.maps.event.addListener(marker)
 			})
 		},
 		type:'GET',
