@@ -1,3 +1,4 @@
-body{
-	background:#f0f;
+html, body, #foursquare-map{
+	height:100%;
+	width:100%;
 }
