@@ -28,25 +28,41 @@ $(document).ready(function() {
           // Object literal
           map: myMap, // Variable map created previously
           position: restoLatLng,
+          map: myMap,
+          animation: google.maps.Animation.DROP
         });
 
         // Info Window when click on marker
         var infowindow = new google.maps.InfoWindow({
-           content: venue.name
+           content: '<div id="content">' + venue.name + '<br/>' + 'Call: '+ venue.contact.phone + '<br/>' + 'Address: ' + venue.location.address + '</div>'
          });
 
-        //  Markers will present venue location, and others
-         var marker = new google.maps.Marker({
-           position: venue.location,
-           map: myMap,
-           title: 'Blah'
-         });
          // Listens for a 'click' to execute below function
          marker.addListener('click', function() {
            infowindow.open(myMap, marker);
+           myMap.setZoom(12);
+           myMap.setCenter(marker.getPosition());
          });
 
+        //  When close infoWindow
+        google.maps.event.addListener(infowindow, 'closeclick', function() {
+          myMap.setZoom(11);
+          myMap.setCenter(marker.getPosition());
+        });
 
+        // 3 seconds after the center of the map has changed, pan back to the marker
+        myMap.addListener('center_changed', function() {
+          window.setTimeout(function() {
+            myMap.panTo(marker.getPosition());
+          }, 5000);
+        });
+
+
+        /* All does the same things
+          marker.addListener('click', function() {}
+          google.maps.addListener(marker, 'click', function() {})
+          google.maps.addEventListener(marker, 'click', function() {})
+        */
 
       });
     },
