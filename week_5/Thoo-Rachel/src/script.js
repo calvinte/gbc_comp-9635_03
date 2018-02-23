@@ -29,8 +29,8 @@ $(document).ready(function(){
 				
 				google.maps.event.addListener(infowindow,'closeclick', function(){
 					map.panTo(this.getPosition())
-					map.setZoom(10);
-					infowindow.close(map,marker)
+					map.setZoom(10)
+					infowindow.close()
 				})
 				
 				google.maps.event.addListener(marker)
