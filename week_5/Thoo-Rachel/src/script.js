@@ -1,4 +1,3 @@
-console.log ('testing')
 $(document).ready(function(){
 	var element = document.getElementById('foursquare-map')
 	var options = {
@@ -20,23 +19,18 @@ $(document).ready(function(){
 				})
 				var infowindow = new google.maps.InfoWindow({
 					content: venue.name, 
-
 				})
+
 				google.maps.event.addListener(marker,"click", function ClickHandler(){
 					map.setCenter(marker.position)
 					map.setZoom(10)
 					infowindow.open(map, marker)
 				})
-				var nextVenueLatLng = new google.maps.LatLng (venue.location.lat,venue.location.lng)
-				var marker2 = new google.maps.Marker({
-					map: map,
-					positions: nextVenueLatLng,
-				})
-				google.maps.event.addListener(marker2,'click', function ClickHandler(){
-						infowindow.close(marker)
-						map.setCenter(marker2.position)
-						map.setZoom(10)
-						infowindow.open(map,marker2)
+				
+				google.maps.event.addListener(infowindow,'closeclick', function(){
+					map.panTo(this.getPosition())
+					map.setZoom(10);
+
 				})
 				
 				google.maps.event.addListener(marker)
