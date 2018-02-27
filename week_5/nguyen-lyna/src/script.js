@@ -10,7 +10,7 @@ $(document).ready(function() {
   var element = document.getElementById('foursquare-map');
   var options = {
     center: new google.maps.LatLng(43.6532, -79.3832), // Lat + Lng constructor accessible Google Maps Object
-    zoom: 10
+    zoom: 11
   } // Object literal
   var myMap = new google.maps.Map(element, options); // or var map = Map()
 
@@ -18,10 +18,28 @@ $(document).ready(function() {
     type: 'GET',
     dataType: 'jsonp', // Allows callback JS file w JS code, jquery adds p for padding
     cache: false,
-    url: 'https://api.foursquare.com/v2/venues/search?client_id=FP54LMRY0H5RBPVEAF4AEQRWT3LFUOI4MLPGY0XMUNNZQI4F&client_secret=TFITB2WTPZ0SEZMQDQTCJM0P24CXRX4JGHWCJ4ZJEIQSW3MJ&v=20180230&near=Toronto&query=vietnamese&limit=10',
+    url: 'https://api.foursquare.com/v2/venues/search?client_id=FP54LMRY0H5RBPVEAF4AEQRWT3LFUOI4MLPGY0XMUNNZQI4F&client_secret=TFITB2WTPZ0SEZMQDQTCJM0P24CXRX4JGHWCJ4ZJEIQSW3MJ&v=20180270&near=Toronto&categoryId=4d4b7105d754a06374d81259&limit=20',
+      // near Toronto, categoryID for Food:  4d4b7105d754a06374d81259, search limit 20
     // jquery loads url successfully, executes next line/function
     success: function(response) {
       console.log(response);
+
+      /* Search function */
+      function search() {
+        $('#searchBtn').click(function() {
+          var searchInput = $('input#searchInput').val();
+          console.log(searchInput);
+          
+          /****
+            NOTE:  How do I link the search keywords to the results and marker?
+            NOTE:  How to take the keyword search and filter results via marker loop
+          ****/
+        });
+      }
+      // Call the Search function
+      search();
+
+
       response.response.venues.forEach(function(venue) { //forEach = iterator
         var restoLatLng = new google.maps.LatLng(venue.location.lat, venue.location.lng); // Will create LatLng for map marker
         var marker = new google.maps.Marker({
@@ -33,29 +51,39 @@ $(document).ready(function() {
         });
 
         // Info Window when click on marker
-        var infowindow = new google.maps.InfoWindow({
-           content: '<div id="content">' + venue.name + '<br/>' + 'Call: '+ venue.contact.phone + '<br/>' + 'Address: ' + venue.location.address + '</div>'
-         });
+        var infoWindow = new google.maps.InfoWindow({
+          content: '<div id="content">' + venue.name + '<br/>' + 'Call: '+ venue.contact.phone + '<br/>' + 'Address: ' + venue.location.address + '</div>'
+        });
 
          // Listens for a 'click' to execute below function
          marker.addListener('click', function() {
-           infowindow.open(myMap, marker);
-           myMap.setZoom(12);
-           myMap.setCenter(marker.getPosition());
+           infoWindow.open(myMap, marker);
+           myMap.setZoom(14);
          });
 
         //  When close infoWindow
-        google.maps.event.addListener(infowindow, 'closeclick', function() {
-          myMap.setZoom(11);
+        google.maps.event.addListener(infoWindow, 'closeclick', function() {
+          myMap.setZoom(13);
           myMap.setCenter(marker.getPosition());
         });
 
-        // 3 seconds after the center of the map has changed, pan back to the marker
+        // 5 seconds after the center of the map has changed, pan back to the marker
         myMap.addListener('center_changed', function() {
           window.setTimeout(function() {
             myMap.panTo(marker.getPosition());
           }, 5000);
         });
+
+
+        // OPTIONAL:  InfoWindow Hover
+        // marker.addListener('mouseover', function() {
+        //     infoWindow.open(myMap, this);
+        // });
+
+        // // assuming you also want to hide the infowindow when user mouses-out
+        // marker.addListener('mouseout', function() {
+        //     infoWindow.close();
+        // });
 
 
         /* All does the same things
