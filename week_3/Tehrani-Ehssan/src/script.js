@@ -1,20 +1,25 @@
-google.maps.event.addDomListener(window, 'load', function(){
+(function () {
+	var myMap;
+	var myMarker;
+	var myHomeLatLng;
 
+	window.onload = function() {
+    	initMap();
+	};
 
+	function initMap(){
 
-	var mapElement = document.getElementById('places-map');
-	
-	var mapList = document.getElementById('places-list');
-	
-	navigator.geolocation.getCurrentPosition(function(position){
+		
+		var mapElement = document.getElementById('places-map');
+		
+		var mapList = document.getElementById('places-list');
 
-		var homeLat = position.coords.latitude;
-		var homeLng = position.coords.longitude;
-		var myHomeLatLng = new google.maps.LatLng(29.979175, 31.134358);
+		myHomeLatLng = new google.maps.LatLng(29.979175, 31.134358);
 
 		var mapOptions = {
 			center: myHomeLatLng,
 			zoom: 2,
+
 
 			styles: [
             {elementType: 'geometry', stylers: [{color: '#242f3e'}]},
@@ -97,99 +102,151 @@ google.maps.event.addDomListener(window, 'load', function(){
             }
           ]
 		};
-
-		var myMap = new google.maps.Map(mapElement, mapOptions);
+		
+		myMap = new google.maps.Map(mapElement, mapOptions);
 
 
 		var myPlaces = [{
-			location: 'Toronto, Ontario',
-			tagLine: 'There is no place like home',
-			website: '<a href="http://www.wikipedia.com" target=_new>wikipedia.com</a>',
-			lat: homeLat,
-			lng: homeLng,
+			//Toronto, Ontario
+			lat: 43.653226, 
+			lng: -79.383184,
 		},{
-			location: 'London, England',
-			tagLine: 'Buckingham Palace',
-			website: '<a href="http://www.wikipedia.com" target=_new>wikipedia.com</a>',
+			//London, England
 			lat: 51.507351,
 			lng: -0.127758,
 		},{
-			location: 'Paris, France',
-			tagLine: 'The Eiffel Tower and the Louvre',
-			website: '<a href="http://www.wikipedia.com" target=_new>wikipedia.com</a>',
+			//Paris, France
 			lat: 48.856614,
 			lng: 2.352222,
 		},{
-			location: 'Cairo, Egypt',
-			tagLine: 'The Pyramids',
-			website: '<a href="http://www.wikipedia.com" target=_new>wikipedia.com</a>',
+			//Cairo, Egypt
 			lat: 30.044420,
 			lng: 31.235712,
 		},{
-			location: 'Bangkok, Thailand',
-			tagLine: 'Muay Thai and Temples',
-			website: '<a href="http://www.wikipedia.com" target=_new>wikipedia.com</a>',
+			//Bangkok, Thailand
 			lat: 13.756331,
 			lng: 100.501765,
 		},{
-			location: 'Havana, Cuba',
-			tagLine: 'Cigars and Rum',
-			website: '<a href="http://www.wikipedia.com" target=_new>wikipedia.com</a>',
+			//Havana, Cuba
 			lat: 23.113592,
 			lng: -82.366596,
 		},{
-			location: 'San Diego, California',
-			tagLine: 'You stay classy San Diego',
-			website: '<a href="http://www.wikipedia.com" target=_new>wikipedia.com</a>',
+			//San Diego, California
 			lat: 32.715738,
 			lng: -117.161084,
 		}]
 
 		myPlaces.forEach(function(place){
-			console.log(place.content);
 			var latLng = new google.maps.LatLng(place.lat, place.lng);
 
-			//this is an object literal
-			var myMarker = new google.maps.Marker({
-				//variables in an object literal is denoted with : and ending with ,
+			myMarker = new google.maps.Marker({
 				map: myMap,
 				position: latLng,
 			})
 
-			var myInfoWindow = new google.maps.InfoWindow({
-				content: '<h3>' + place.location + '</h3>',
-
-			})
-
-			
-
-			google.maps.event.addListener(myMarker, 'mouseover', function HoverHandlerOver(){
-				myInfoWindow.open(myMap, myMarker);
-
-
-			});
-
-			google.maps.event.addListener(myMarker, 'mouseout', function HoverHandlerOut(){
-				myInfoWindow.close(myMap, myMarker);
-			});
-
-			google.maps.event.addListener(myMarker, 'click',  function ClickHandler(){
-				myMap.setCenter(myMarker.position);
-				myMap.setZoom(12);
-				myInfoWindow.open(myMap, myMarker);
-				document.getElementById('places-list').style.visibility = "visible";
-				document.getElementById('places-list').innerHTML = '<p>' + '<h4>' + place.location + '</h4>' + place.tagLine + place.website + '</p>';
-
-			});
-
-			google.maps.event.addListener(myInfoWindow,'closeclick',function(){
-				myMap.setCenter(myHomeLatLng);
-				myMap.setZoom(2);
-				document.getElementById('places-list').style.visibility = "hidden";
-			});
-
 		})
-	})
-})
+	}
+
+	function zoomFunction(event){
+
+		var latZoom = event.data.lat;
+		var lngZoom = event.data.lng;
+
+		console.log("zoom function");
+
+		console.log(latZoom);
+		console.log(lngZoom);
+
+		var myZoom = new google.maps.LatLng(latZoom,lngZoom);
+
+		myMarker = new google.maps.Marker({
+				map: myMap,
+				position: myZoom,
+		});
+		document.getElementById('places-info').style.visibility="visible";
+		myMap.setCenter(myMarker.position);
+		myMap.setZoom(12);
+		document.getElementById('places-info').innerHTML = '<h4>' + event.data.location + '</h4>' + '<p>' + event.data.tagLine + '<br>' + event.data.website + '</p>';
+	}
+
+	$('#refreshButton').click(function(){
+		
+		myMap.setCenter(myHomeLatLng);
+		myMap.setZoom(2);
+		document.getElementById('places-info').style.visibility="hidden";
+
+	});
+
+
+	$().ready(function () {
+  		$('#myLinkId1').click({ 
+  			console.log("Hello");
+  			location: 'Toronto, Ontario',
+			tagLine: 'There is no place like home',
+			website: '<a href="https://en.wikipedia.org/wiki/Toronto" target=_new>wikipedia.com - Toronto</a>',
+  			lat: 43.653226,
+  			lng: -79.383184,
+  		}, zoomFunction);
+  		
+
+  		$('#myLinkId2').click({ 
+  			location: 'San Diego, California',
+			tagLine: 'You stay classy San Diego',
+			website: '<a href="https://en.wikipedia.org/wiki/San_Diego" target=_new>wikipedia.com - San Diego</a>',
+			lat: 32.715738,
+			lng: -117.161084,
+  		}, zoomFunction);
+
+
+  		$('#myLinkId3').click({ 
+  			location: 'London, England',
+			tagLine: 'Buckingham Palace',
+			website: '<a href="https://en.wikipedia.org/wiki/London" target=_new>wikipedia.com - London</a>',
+			lat: 51.507351,
+			lng: -0.127758,
+  		}, zoomFunction);
+
+  		$('#myLinkId4').click({ 
+  			location: 'Paris, France',
+			tagLine: 'The Eiffel Tower and the Louvre',
+			website: '<a href="https://en.wikipedia.org/wiki/Paris" target=_new>wikipedia.com - Paris</a>',
+			lat: 48.856614,
+			lng: 2.352222,
+  		}, zoomFunction);
+
+  		$('#myLinkId5').click({ 
+  			location: 'Cairo, Egypt',
+			tagLine: 'The Pyramids',
+			website: '<a href="https://en.wikipedia.org/wiki/Cairo" target=_new>wikipedia.com - Cairo</a>',
+			lat: 30.044420,
+			lng: 31.235712,
+  		}, zoomFunction);
+
+		$('#myLinkId6').click({ 
+  			location: 'Bangkok, Thailand',
+			tagLine: 'Muay Thai and Temples',
+			website: '<a href="https://en.wikipedia.org/wiki/Bangkok" target=_new>wikipedia.com - Bangkok</a>',
+			lat: 13.756331,
+			lng: 100.501765,
+  		}, zoomFunction);
+
+  		$('#myLinkId7').click({ 
+  			location: 'Havana, Cuba',
+			tagLine: 'Cigars and Rum',
+			website: '<a href="https://en.wikipedia.org/wiki/Havana" target=_new>wikipedia.com - Havana</a>',
+			lat: 23.113592,
+			lng: -82.366596,
+  		}, zoomFunction);
+
+
+	});
+
+}());
+
+
+
+
+
+
 
 
