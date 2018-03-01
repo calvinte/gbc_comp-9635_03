@@ -1,0 +1,37 @@
+body{
+  background: linear-gradient(
+      rgba(49, 95, 224, 0.45),
+      rgba(49, 95, 224, 0.45)
+    ),url('https://www.toronto.ca/wp-content/uploads/2017/10/9680-tomaps-870x338.png');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+
+}
+
+
+.img-thumbnail{
+  margin:0 2% 2% 0;
+  width:310px;
+
+}
+
+.container{
+
+  margin:0 auto 0 10%;
+}
+
+.title{
+  font-family: 'Titillium Web', sans-serif;
+  color:white;
+  -webkit-text-stroke: 1px black;
+}
+.value{
+  margin-left:40%;
+}
+
+#btn{
+  height:30px;
+  line-height: 10px
+}
