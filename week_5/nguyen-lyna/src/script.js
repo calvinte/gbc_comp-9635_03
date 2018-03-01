@@ -67,15 +67,16 @@ $(document).ready(function() {
           myMap.setCenter(marker.getPosition());
         });
 
+
+        /****** OPTIONAL: ******/
         // 5 seconds after the center of the map has changed, pan back to the marker
-        myMap.addListener('center_changed', function() {
-          window.setTimeout(function() {
-            myMap.panTo(marker.getPosition());
-          }, 5000);
-        });
+        // myMap.addListener('center_changed', function() {
+        //   window.setTimeout(function() {
+        //     myMap.panTo(marker.getPosition());
+        //   }, 5000);
+        // });
 
-
-        // OPTIONAL:  InfoWindow Hover
+        // InfoWindow Hover
         // marker.addListener('mouseover', function() {
         //     infoWindow.open(myMap, this);
         // });
