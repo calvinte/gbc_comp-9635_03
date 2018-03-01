@@ -37,3 +37,7 @@ function loadMarkersFromTerm(term) {
     }
   })
 }
+
+$('mybutton').click(function(){
+  console.log('this was clicked');
+})
