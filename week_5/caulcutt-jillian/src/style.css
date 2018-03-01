@@ -1,6 +1,24 @@
-html, body, #foursquare-map {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	width: 100%;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+#foursquare-map {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 75%;
+  float: right;
+}
+
+#sidebar {
+  background-color: #cccccc;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 25%;
+  float: left;
 }
