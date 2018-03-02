@@ -2,7 +2,7 @@ $(document).ready(function(){
 	var element = document.getElementById('foursquare-map')
 	var options = {
     center: new google.maps.LatLng(43.6532, -79.3832),
-		zoom: 10,
+		zoom: 13,
 	}
   var map = new google.maps.Map(element, options)
 	$.ajax({
@@ -23,7 +23,7 @@ $(document).ready(function(){
 					content: gallery.name
 				})
 				google.maps.event.addListener(marker, 'click', function(){
-					map.setZoom(12);
+					map.setZoom(15);
 					infowindow.open(map, marker);
 				})
 
@@ -31,7 +31,7 @@ $(document).ready(function(){
 
 				google.maps.event.addListener(infowindow, 'closeclick', function(){
           map.panTo(this.getPosition());
-					map.setZoom(10);
+					map.setZoom(15);
 				})
 
 
@@ -39,6 +39,9 @@ $(document).ready(function(){
 		},
 
 	})
+
+var transitLayer = new google.maps.TransitLayer();
+transitLayer.setMap(map);
 
 })
 
