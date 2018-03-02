@@ -54,6 +54,7 @@ console.log('testing');
     }
 
       var markers = [];
+      var venues = [];
 
       // Add Submit Function
       $('#submit').click(function(){  
@@ -69,10 +70,13 @@ console.log('testing');
             cache: false,
             url: 'https://api.foursquare.com/v2/venues/search?client_id=XUXLO0NUOU5C54RCWE2UXF50MHWEL52I1APLQVSMBQJDGFPX&client_secret=0BEDRXQL312RAUAK2M5ON35BLUWSBRNCQDQNKADJ5COXJ4VJ&v=20180212&near='+ location +'&query=' + query,
             success: function(response) {
+              var venues = response.response.venues;
               console.log(response);
               //clear the map first
-            clearTheMap();
-              response.response.venues.forEach(function(venue) {
+              clearTheMap();
+              createSideBarHtml(venues);
+              venues.forEach(function(venue) {
+                venues.push(venue);
                 var venueLatLng = new google.maps.LatLng(venue.location.lat, venue.location.lng);
                 var marker = new google.maps.Marker({
                   map: map,
@@ -88,6 +92,7 @@ console.log('testing');
                   infowindow.open(map, marker);
                 })
               })
+              console.log(venues);
             },
           })
      // call the drawmap fuction
@@ -115,7 +120,16 @@ console.log('testing');
                     markers[i].setMap(null);
                   }
                     markers = [];
+                    venues =[];
                 }
+
+              function createSideBarHtml(venues) {
+                html = '';
+                venues.forEach(fuction(venue){
+                  // do this
+                });
+                $('#sidebarname').innerHTML(html)
+              }
 
     });
 
