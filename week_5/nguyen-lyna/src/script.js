@@ -8,21 +8,22 @@
 $(document).ready(function() {
   // Executing Map constructor, Google Maps API
   var latlng = new google.maps.LatLng('43.6532', '-79.3832');
-    var myMap = new google.maps.Map(document.getElementById('foursquare-map'), {
-      center: latlng,
-      zoom: 11
-    });
-    var markers = [];
+  var myMap = new google.maps.Map(document.getElementById('foursquare-map'), {
+    center: latlng,
+    zoom: 11
+  });
+  var markers = [];
+  var lastOpenedWindow; // will store value as it goes along
 
-    // Function to clear the map after each search
-    function clearTheMap() {
-      for(var i = 0; i < markers.length; i ++) {
-        markers[i].setMap(null);
-      }
-      markers = [];
+  // Function to clear the map after each search
+  function clearTheMap() {
+    for(var i = 0; i < markers.length; i ++) {
+      markers[i].setMap(null);
     }
+      markers = [];
+  }
 
-   /* Search function */
+ /* Search function */
  $('#searchBtn').click(function() {
    var searchInput = $('input#searchInput').val();
 
@@ -53,6 +54,11 @@ $(document).ready(function() {
          var infoWindow = new google.maps.InfoWindow({ content: '<div>' + venue.name + '<br/>' + 'Call: '+ venue.contact.phone + '<br/>' + 'Address: ' + venue.location.address + '</div>' })
          google.maps.event.addListener(marker, 'click', function() {
            infoWindow.open(myMap, marker);
+           if(lastOpenedWindow) {
+             lastOpenedWindow.close() // checks if there's a value to lastOpenedWindow, then replaces with infoWindow
+           }
+          //
+          lastOpenedWindow = infoWindow
            myMap.setZoom(14);
          });
 
