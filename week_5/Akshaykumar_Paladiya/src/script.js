@@ -1,16 +1,21 @@
 $(document).ready(function() {
-	var latlng = new google.maps.LatLng('43.730610', '-77.0060');
+	var latlng = new google.maps.LatLng('43.6532', '-79.3832');
 	var map = new google.maps.Map(document.getElementById('foursquare-map'), {
 		center: latlng,
 		zoom: 10
 	});
-
-	$.ajax({
+var markers = [];
+	
+    $('#mybutton').click(function(){
+        var term = $('#myinput').val();
+        console.log(term);
+        $.ajax({
 		type: "GET",
 		dataType: "jsonp",
 		cache: false,
-        url: 'https://api.foursquare.com/v2/venues/search?client_id=UYXWDL4J1XESVFDVL4IQS4FKZJVLMCOF0SKNRRWRBBSC0LPE&client_secret=IFYVZGRK3EVI4DF1JEND5ZHC1K15NP5GAZ3NKXPOVCELZQSL&v=20180212&near=Toronto&query=tacos',
+        url: 'https://api.foursquare.com/v2/venues/search?client_id=XUXLO0NUOU5C54RCWE2UXF50MHWEL52I1APLQVSMBQJDGFPX&client_secret=0BEDRXQL312RAUAK2M5ON35BLUWSBRNCQDQNKADJ5COXJ4VJ&v=20180212&near=Toronto&query='+term,
 		success: function(response) {
+            clearTheMap();
             console.log(response);
             response.response.venues.forEach(function(venue){
                 var vanuelatlang = new google.maps.LatLng(venue.location.lat, venue.location.lng);
@@ -19,7 +24,7 @@ $(document).ready(function() {
                     map: map,
                     position:vanuelatlang,
                 });
-
+               markers.push(marker);
                 var infowindow = new google.maps.InfoWindow({
                     content: venue.name,
                 })
@@ -35,6 +40,14 @@ $(document).ready(function() {
         }
 
     });
+    })
+    
+    function clearTheMap(){
+        for(var i=0;i<markers.length;i++){
+            markers[i].setMap(null);
+        }
+        markers = [];
+    }
 })
 
 
