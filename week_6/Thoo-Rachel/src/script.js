@@ -1,9 +1,11 @@
-$(document).ready(function() {
-  var latlng = new google.maps.LatLng('43.6532', '-79.3832');
-  var map = new google.maps.Map(document.getElementById('foursquare-map'), {
-    center: latlng,
-    zoom: 10
-  });
+$$(document).ready(function(){
+  var element = document.getElementById('foursquare-map')
+  var options = {
+    zoom: 10,
+    center: new google.maps.LatLng(43.6532, -79.3832), 
+  }
+  var map = new google.maps.Map(element,options)
+var lastInfoWindow = null;
 var markers = {};
 
 $('mybutton').click(function(){
@@ -27,7 +29,16 @@ $('mybutton').click(function(){
         var infowindow = new google.maps.InfoWindow({ content: venue.name });
         google.maps.event.addListener(marker, 'click', function() {
           map.setZoom(12);
-          infowindow.open(map, marker);
+          infowindow.open(map, marker)
+          if (lastInfoWindow) {
+            lastInfoWindow.close()
+          }
+          lastInfoWindow = infowindow
+        })
+        
+        google.maps.event.addListener(infowindow,'closeclick', function(){
+          lastInfoWindow = null
+});
         });
       });
     }
