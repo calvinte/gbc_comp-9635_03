@@ -14,7 +14,7 @@ html, body, #foursquare-map {
 	right: 0;
 }
 
-#map-input input {
+input {
 	width: 300px;
 	height: 25px;
 
