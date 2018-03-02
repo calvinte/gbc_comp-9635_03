@@ -1,15 +1,17 @@
-$$(document).ready(function(){
+$(document).ready(function(){
+  console.log('hisss')
   var element = document.getElementById('foursquare-map')
   var options = {
     zoom: 10,
     center: new google.maps.LatLng(43.6532, -79.3832), 
   }
   var map = new google.maps.Map(element,options)
-var lastInfoWindow = null;
-var markers = {};
+var lastInfoWindow = null,
+var markers = [];
 
-$('mybutton').click(function(){
+$('#mybutton').click(function(){
   var term = $('#myinput').val();
+  console.log('hi')
   $.ajax({
     type: "GET",
     dataType: "jsonp",
@@ -26,8 +28,10 @@ $('mybutton').click(function(){
           map: map
         });
         markers.push(marker)
+        
         var infowindow = new google.maps.InfoWindow({ content: venue.name });
-        google.maps.event.addListener(marker, 'click', function() {
+        google.maps.event.addListener(marker, 'click', function Clickhandler() {
+          console.log("last info", lastInfoWindow)
           map.setZoom(12);
           infowindow.open(map, marker)
           if (lastInfoWindow) {
