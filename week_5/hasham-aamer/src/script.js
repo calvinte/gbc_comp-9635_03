@@ -1,4 +1,4 @@
-console.log("Testing");
+
 
 $(document).ready(function(){
   //var element=document.getElementById('foursquare-map')
