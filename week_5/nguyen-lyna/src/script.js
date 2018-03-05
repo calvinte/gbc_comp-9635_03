@@ -31,8 +31,8 @@ $(document).ready(function() {
      type: 'GET',
      dataType: 'jsonp', // Allows callback JS file w JS code, jquery adds p for padding
      cache: false,
-     url: 'https://api.foursquare.com/v2/venues/search?client_id=FP54LMRY0H5RBPVEAF4AEQRWT3LFUOI4MLPGY0XMUNNZQI4F&client_secret=TFITB2WTPZ0SEZMQDQTCJM0P24CXRX4JGHWCJ4ZJEIQSW3MJ&v=20180280&near=Toronto&limit=20&query=' + searchInput,
-       // near Toronto, search limit 20
+     url: 'https://api.foursquare.com/v2/venues/search?client_id=FP54LMRY0H5RBPVEAF4AEQRWT3LFUOI4MLPGY0XMUNNZQI4F&client_secret=TFITB2WTPZ0SEZMQDQTCJM0P24CXRX4JGHWCJ4ZJEIQSW3MJ&v=20180280&near=Toronto&categoryId=4d4b7105d754a06374d81259&limit=20&query=' + searchInput,
+       // near Toronto, food category only, search limit 20
      // jquery loads url successfully, executes next line/function
      success: function(response) {
        console.log(response);
