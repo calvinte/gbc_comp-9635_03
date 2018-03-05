@@ -2,10 +2,14 @@
 <html>
 <head>
 <title>
-  Week 5
+  Foursquare Listings by City
 </title>
+
   <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9rABaf_KBbLEY9UI2wiwiOZ8SeFoAZBE&sensor=false"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
   <script src="/script.js"></script>
 
   <link href="style.css" rel="stylesheet">
@@ -13,9 +17,21 @@
 
 </head>
   <body>
-  
-    <div id="foursquare-map"></div>
 
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div id="foursquare-map"></div>
+    <div id="input-container">
+      <input id="myinput" /><br>
+      <button id="mybutton" type="button" class="btn-primary"> Get Listings </button>
+    </div>
   </body>
 
 </html>

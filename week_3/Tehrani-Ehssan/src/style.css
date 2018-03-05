@@ -8,13 +8,17 @@ html, body, .container-fluid,.row, .mapContainer, #places-map{
     #places-map{
         position: relative;
     }
-h3{
+h4{
 	font-weight: 900;
-	color: #fff;
+	font-size: 1.5vw;
 	text-align: center;
 }
 
-#places-list{
+#places-info > p{
+	text-align: center;
+}
+
+#places-list, #refresh{
 	margin: 0;
 	padding: 1vw;
 }
