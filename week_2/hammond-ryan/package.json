@@ -1,0 +1,13 @@
+{
+  "name": "hammond-ryan",
+  "version": "1.0.0",
+  "description": "week 2",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}

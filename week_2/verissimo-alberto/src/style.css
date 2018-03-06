@@ -1,5 +1,9 @@
-#map-canvas{
+#map-canvas, #pano{
 height:300px;
 width:100%;
 margin:0 auto;
+}
+
+h1, #first{
+  font-family: 'Open Sans Condensed', sans-serif;
 }

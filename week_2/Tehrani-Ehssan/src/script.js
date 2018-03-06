@@ -5,7 +5,7 @@ google.maps.event.addDomListener(window, "load", function() {
 
 	console.log("Page is loaded")
 
-	navigator.geolocation.getCurrentPosition(function(position){
+		navigator.geolocation.getCurrentPosition(function(position){
 		console.log(position)
 
 		var myMapCanvas = document.getElementById("map-canvas")
@@ -21,6 +21,7 @@ google.maps.event.addDomListener(window, "load", function() {
 		var marker = new google.maps.Marker({
 			position: myLatLng,
 			map: myMap,
+			title: "You are here",
 			
 		});
 		console.log(myLatLng)

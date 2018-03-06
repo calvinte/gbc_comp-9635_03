@@ -4,17 +4,20 @@
 <head>
 <title>Week 2</title>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9rABaf_KBbLEY9UI2wiwiOZ8SeFoAZBE&sensor=false"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9rABaf_KBbLEY9UI2wiwiOZ8SeFoAZBE&libraries=places"></script>
+
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBq1Fhaw6hP7cXfvV26Quwr25imR-kfFa4&sensor=false"></script>-->
 
 <script src="/script.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
 <link href ="style.css" rel="stylesheet"/>
 </head>
 <body>
+  <center><h1>Alberto Location</h1></center>
+  <center><p id="first">Click on the <b>A</b> and <b>B</b> icons for information about those places</p></center>
 <div id="map-canvas"></div>
-<div id="bio">
-This is the house that I lived most of my childhood and all my teenage years. it is located in a city called Florencio Varela in the Province
-of Buenos Aires, Argentina. My mother and my 2 sisters still live there, I go to visit this place once every 2 years.
-</div><!--Bio-->
+<div id="bio"></div><!--Bio-->
+<div id="pano"></div>
 </body>
 
 </html>
