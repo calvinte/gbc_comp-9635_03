@@ -24,13 +24,13 @@
 				url: 'https://api.foursquare.com/v2/venues/search?client_id=UYXWDL4J1XESVFDVL4IQS4FKZJVLMCOF0SKNRRWRBBSC0LPE&client_secret=IFYVZGRK3EVI4DF1JEND5ZHC1K15NP5GAZ3NKXPOVCELZQSL&v=20180212&near='+ location +'&query=' + query,
 				
 				success: function(response){
-					document.getElementById('output').innerHTML = ''
-						html ="";
+					document.getElementById('output').innerHTML = '';
+
 					response.response.venues.forEach(function(venue){
 						
 						console.log(response);
 						var location = venue.location;
-						html = '<p>';
+						var html = '<p>';
 						html += venue.name;
 						html +='<br>';
 						html +='<img src="';
