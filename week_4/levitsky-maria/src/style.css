@@ -1,0 +1,20 @@
+body {
+    width: 720px;
+}
+h1 {
+   color: orchid;
+   font-family: Verdana, sans-serif;
+   font-size: 25px;
+   font-weight: bold;    
+   background-color: #141617;
+}
+
+h3 {
+    color: black;
+    font-family: Verdana, sans-serif;
+    background-color: greenyellow;
+}
+
+img {
+    border: 5px solid black;
+}
