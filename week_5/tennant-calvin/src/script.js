@@ -1,4 +1,8 @@
-$(document).ready(function() {
+console.log('testing')
+
+
+
+/* $(document).ready(function() {
 	var latlng = new google.maps.LatLng('43.6532', '-79.3832');
 	var map = new google.maps.Map(document.getElementById('foursquare-map'), {
 		center: latlng,
@@ -28,4 +32,4 @@ $(document).ready(function() {
 	});
 })
 
-
+*/
