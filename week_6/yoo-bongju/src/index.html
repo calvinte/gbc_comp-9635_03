@@ -1,36 +1,77 @@
 <!doctype html>
 <html>
 	<head>
-		<title>Week: Week 5, Foursquare + Google Maps API!</title>
+		<title>Foursquare + Google Maps API</title>
+	<!--
 		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-  		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9rABaf_KBbLEY9UI2wiwiOZ8SeFoAZBE&sensor=false"></script>
+  	-->
+  	  	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="/script.js"></script>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-    	<link href="style.css" rel="stylesheet">
+  		<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD9rABaf_KBbLEY9UI2wiwiOZ8SeFoAZBE&sensor=false"></script>
+		<script src="script.js"></script>
+    		<link href="style.css" rel="stylesheet">
 	</head>
 	<body>
-  		<div id="foursquare-map"></div>
-		<div id="map-input">
-			<input/>
-			<button> Search </button>
-		</div>
-		<div id="radioBtnForm">
-	<form>
-	    <label class="radio-inline">
-	      <input type="radio" name="rbnNumber" value="Toronto">Toronto
-	    </label>
-	    <label class="radio-inline">
-	      <input type="radio" name="rbnNumber" value="Vancouver">Vancouver
-	    </label>
-	    <label class="radio-inline">
-	      <input type="radio" name="rbnNumber" value="Calgary">Calgary
-	    </label>
-  	</form>
-  		<div id="msg">
-  			<p></p>
-  		</div>
-		</div>
+	  		<div id="foursquare-map" class="container">
+	  		</div>
+				<div id="map-input" class="row">
+					<div id="radioBtnForm">
+						<div class="row btn-group" data-toggle="buttons">
+							<label class="btn btn-primary btn-md">
+						    	<input type="radio" name="rbnCar" id="option1" value="Benz">Benz
+						    </label>						    
+						    <label class="btn btn-primary">
+						    	<input type="radio" name="rbnCar" id="option2" value="Honda">Honda
+						    </label>
+						    <label class="btn btn-primary">
+						        <input type="radio" name="rbnCar" id="option3" value="Toyota">Toyota
+						    </label>
+						    <label class="btn btn-primary">
+						        <input type="radio" name="rbnCar" id="option4" value="Kia">Kia
+						    </label>
+						    <label class="btn btn-primary">
+						        <input type="radio" name="rbnCar" id="option5" value="Ford">Ford
+						    </label>
+						    <label class="btn btn-primary">
+						        <input type="radio" name="rbnCar" id="option6" value="Infiniti">Infiniti
+						    </label>
+						    <label class="btn btn-primary">
+						        <input type="radio" name="rbnCar" id="option7" value="Lexus">Lexus
+						    </label>
+						    <label class="btn btn-primary">
+						        <input type="radio" name="rbnCar" id="option8" value="Mazda">Mazda
+						    </label>
+						    <label class="btn btn-primary">
+						        <input type="radio" name="rbnCar" id="option9" value="Acura">Acura
+						    </label>
+						    <label class="btn btn-primary">
+						        <input type="radio" name="rbnCar" id="option10" value="BMW">BMW
+						    </label>
+						    <label class="btn btn-primary">
+						        <input type="radio" name="rbnCar" id="option11" value="Audi">Audi
+						    </label>
+						    <label class="btn btn-primary">
+						        <input type="radio" name="rbnCar" id="option12" value="Jeep">Jeep
+						    </label>
+						    <label class="btn btn-primary">
+						        <input type="radio" name="rbnCar" id="option13" value="Volvo">Volvo
+						    </label>
+						</div>
+					</div>
+						<div class="row">			
+							<button type="button" class="btn btn-primary btn-md" id="btnMap-toronto"> Toronto </button>
+							<button type="button" class="btn btn-primary btn-md" id="btnMap-calgary"> Calgary </button>
+							<button type="button" class="btn btn-primary btn-md" id="btnMap-vancouver"> Vancouver </button>
+							<button type="button" class="btn btn-primary btn-md" id="btnMap-edmonton"> Edmonton </button>
+							<button type="button" class="btn btn-primary btn-md" id="btnMap-montreal"> Montreal </button>
+							<button type="button" class="btn btn-primary btn-md" id="btnMap-ottawa"> Ottawa </button>
+						</div>
+						<div id="msg">
+				  			<p></p>
+				  		</div>	
+				</div>
+		</div> 
 	</body>
 </html>
 
