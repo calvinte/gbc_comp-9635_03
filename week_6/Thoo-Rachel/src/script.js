@@ -55,8 +55,7 @@ google.maps.event.addListener(marker,"click", function ClickHandler(){
           lastInfoWindow = null
         })
         
-        google.maps.event.addListener(marker)
-}
+ 
 
 // add the marker and its window to the map
 function addVenueMarkerOnMap(venue) {
