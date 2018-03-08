@@ -78,7 +78,7 @@ $(document).ready(function() {
 
 /****** OPTIONAL: ******/
 
-// 5 seconds after the center of the map has changed, pan back to the marker
+//5 seconds after the center of the map has changed, pan back to the marker
 // myMap.addListener('center_changed', function() {
 //   window.setTimeout(function() {
 //     myMap.panTo(marker.getPosition());
