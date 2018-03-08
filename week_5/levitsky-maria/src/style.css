@@ -1,6 +1,84 @@
-html, body, #foursquare-map {
+html, body {
 	height: 100%;
-	margin: 0;
-	padding: 0;
-	width: 100%;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+
+  > .col,
+  > [class*="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}
+
+#foursquare-map {
+	height: 100%;
+	border: 3px solid black;
+}
+
+#map-card {
+	height: 100%;
+	border: 3px solid black;
+}
+
+#more-info {
+	margin: 10%;
+	height:75%;
+	width: 75%;
+	border: 10px solid black;
+	border-style: double;
+	background-color: royalblue;
+}
+
+#more-info:hover {
+	transform: rotate(-25deg);
+	height: 85%;
+	width: 85%;
+	margin: 5%;
+}
+
+h2 {
+	padding-top: 35%;
+	color: gold;
+	margin: 10px;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h4 {
+	color: darkorange;
+	border: 7px royalblue;
+	border-style: double;
+	padding: 2px;
+	font-family: "Lucida Console", Monaco, monospace;
+}
+
+p {
+	color:lightgreen;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#map-card-text {
+	color: lightgreen;
+	font-family: Courier New, Courier, monospace;
+}
+
+@media only screen and (max-width: 500px) {
+
+	#more-info {
+		height: 100%;
+		width: 100%;
+		margin: auto;
+	}
+
+	#more-info:hover {
+		height: 100%;
+		width: 100%;
+		margin: auto;
+	}
+
+	h2 {
+		font-size: 1.3em;
+	}
 }
