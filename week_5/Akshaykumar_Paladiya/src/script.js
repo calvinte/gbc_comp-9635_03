@@ -27,10 +27,7 @@ $(document).ready(function() {
                     map.setZoom(12);
                     infowindow.open(map, marker);
                 });      
-                google.maps.event.addListener(infowindow, 'closeclick', function() {
-                    map.panTo(this.getPosition());
-                    map.setZoom(5);
-                }); 
+                
             });
         }
 
