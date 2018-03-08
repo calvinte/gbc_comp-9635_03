@@ -1,0 +1,36 @@
+body{
+	background-color: #ffe6b3;
+}
+h1{
+	background-color: white;
+	height:150px;
+	width:100%;
+	font-size: 60px;
+	text-align: center;
+	padding-top: 46px;
+	color:white;
+	text-shadow:2px 2px #332200;
+	background-image:url("dance banner.jpg");
+	background-position: 50% 35%;
+	background-size: 1000px;
+	position: relative;
+	overflow:hidden;
+	background-repeat: no-repeat;
+
+}
+
+div{
+	
+	float:right;
+	margin: 5px;
+}								
+
+p{
+	padding-left: 20px;
+	font-size: 20px;
+}
+
+img{
+	border: 1px black solid;
+	border-radius:25px;
+}

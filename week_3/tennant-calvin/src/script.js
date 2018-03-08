@@ -67,7 +67,7 @@ google.maps.event.addDomListener(window, 'load', function() {
 		var infowindow = new google.maps.InfoWindow({
 			content: wonder.name + wonder.image + wonder.description
 		});
-		google.maps.event.addListener(marker, 'click', function() {
+		google.maps.event.addListener(marker, 'click',  function() {
 			map.setCenter(marker.position);
 			map.setZoom(12);
 			infowindow.open(map, marker);
