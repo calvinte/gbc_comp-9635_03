@@ -1,0 +1,37 @@
+body,html,#foursquare-map {
+  width: 100%;
+  height: 100%;
+}
+
+
+#input-container{
+  right:0;
+  left:0;
+  text-align: center;
+}
+
+
+#myinput {
+	width: 300px;
+	height: 25px;
+}
+
+/*
+Need to figure out how to make navigation visible
+#navigation{
+  position:absolute;
+  top:25;
+  right:0;
+  left:0;
+}
+
+*/
+
+/*
+Will replace this styling with Bootstrap button styles
+#mybutton {
+	height: 50px;
+	color: blue;
+	background-color: #0FA0CE;
+	border-radius: 10px;
+}*/
