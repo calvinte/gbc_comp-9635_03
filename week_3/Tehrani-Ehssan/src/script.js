@@ -180,7 +180,6 @@
 
 	$().ready(function () {
   		$('#myLinkId1').click({ 
-  			console.log("Hello");
   			location: 'Toronto, Ontario',
 			tagLine: 'There is no place like home',
 			website: '<a href="https://en.wikipedia.org/wiki/Toronto" target=_new>wikipedia.com - Toronto</a>',
