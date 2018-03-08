@@ -28,7 +28,7 @@ var markers = [];
             }
             var map= new google.maps.Map(element,options)
     
-            clearTheMap();
+            
             response.response.venues.forEach(function(venue){
                 var vanuelatlang = new google.maps.LatLng(venue.location.lat, venue.location.lng);
 

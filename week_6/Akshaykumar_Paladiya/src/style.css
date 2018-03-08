@@ -17,6 +17,7 @@ html, body, #foursquare-map {
 #map-input input, select{
 	width: 200px;
 	height: 25px;
+    border-radius: 5px;
 }
 
 #map-input button {
