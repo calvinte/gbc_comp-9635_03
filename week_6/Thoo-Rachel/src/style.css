@@ -1,27 +1,46 @@
 html, body, #foursquare-map {
-	height: 100%;
-	margin: 0;
-	padding: 0;
-	width: 100%;
+	height:95%;
+	top:0;
+	left:0;
+	padding:0;
+	width:100%;
+	background-color:#c2d6d6;
 }
 
+#foursquare-map{
+	border:3px white dotted;
+
+}
 #map-input {
-	padding: 10px;
+	padding:10px;
 	text-align: center;
 	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
+	top: 180px;
+	left: 200px;
+	right:0;
 }
 
 #map-input input {
 	width: 300px;
 	height: 25px;
+	border-radius: 15px;
+	text-align: center;
+	font-style:italic;
+	font-size:18px;
 }
 
+
 #map-input button {
-	height: 25px;
+	height: 35px;
 	color: white;
-	background-color: #0FA0CE;
-	border-radius: 5px;
+	background-color: #000000;
+	border-radius: 15px;
+	font-size: 15px;
+}
+#search{
+	text-align: center;
+	color:white;
+	top:10;
+	font-size:50px;
+	text-shadow: 2px 2px #000000;
 }

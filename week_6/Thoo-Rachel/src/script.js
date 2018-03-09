@@ -2,24 +2,26 @@ var map;
 var markers = [];
 var lastInfoWindow = null
 
-// initialize the map and listen for any clicks to the search button
 $(document).ready(function() {
   initializeMap();
 
+  // function to initialize the map to be seen on the screen
+function initializeMap() {
+  var toronto = new google.maps.LatLng('43.6532', '-79.3832');
+  map = new google.maps.Map(document.getElementById('foursquare-map'), {
+    center: toronto,
+    zoom: 12
+  });
+}
+
+// initialize the map and listen for any clicks to the search button
   $('#map-input button').click(function() {
     var term = $('#map-input input').val();
     loadMarkersFromTerm(term);
   });
 });
 
-// function to initialize the map to be seen on the screen
-function initializeMap() {
-  var toronto = new google.maps.LatLng('43.6532', '-79.3832');
-  map = new google.maps.Map(document.getElementById('foursquare-map'), {
-    center: toronto,
-    zoom: 10
-  });
-}
+
 
 // load the markers from the term in the input box
 function loadMarkersFromTerm(term) {
@@ -55,7 +57,6 @@ google.maps.event.addListener(marker,"click", function ClickHandler(){
           lastInfoWindow = null
         })
         
- 
 
 // add the marker and its window to the map
 function addVenueMarkerOnMap(venue) {
