@@ -24,7 +24,10 @@ html, body, #foursquare-map {
 	width: 300px;
 	height: 25px;
 	border-radius: 15px;
+	text-align: center;
+	font-style:italic;
 }
+
 
 #map-input button {
 	height: 35px;
