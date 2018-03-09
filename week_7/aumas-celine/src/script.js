@@ -34,7 +34,7 @@ $('#mybutton').click(function(){
           var venueLatLng = new google.maps.LatLng(venue.location.lat, venue.location.lng)
           var contentString = '+ <div id="panorama" style="width:200px; height:200px;"></div>'
           var myPanorama = new google.maps.StreetViewPanorama(document.getElementById("#panorama"))
-            position: marker.position;
+            position: venueLatLng;
             pov: (({
               heading: 265,
               pitch: 0
