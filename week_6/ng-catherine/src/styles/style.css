@@ -1,0 +1,61 @@
+html, body, #foursquare-map {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#input-container {
+	box-sizing: border-box;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+#search {
+	height: 55px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	background-color: white;
+}
+
+#locate {
+	margin: 0;
+}
+
+#myinput {
+	height: 15px;
+	width: 200px;
+}
+
+
+
+
+
+
+
+#lamb {
+	width: 100%;
+}
+
+#contact {
+	text-align: right;
+}
+
+.navbar {
+	margin: 0;
+}
+
+.container-fluid {
+	padding: 0;
+}
+
+#cover {
+	background-color: #333333;
+	padding-bottom: 20px;
+	color: white;
+}
+
