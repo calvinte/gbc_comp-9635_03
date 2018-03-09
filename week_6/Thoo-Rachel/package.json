@@ -1,7 +1,7 @@
 {
   "name": "tennant-calvin",
   "version": "1.0.0",
-  "description": "Week 2 in-class presentation",
+  "description": "Week 5 FINAL project",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
