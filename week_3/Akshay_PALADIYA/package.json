@@ -1,6 +1,7 @@
 {
-  "name": "akshay_paladiya",
+  "name": "tennant-calvin",
   "version": "1.0.0",
+  "description": "Week 2 in-class presentation",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -11,5 +12,5 @@
   "dependencies": {
     "express": "^4.16.2"
   },
-  "description": ""
+  "devDependencies": {}
 }

@@ -1,6 +1,7 @@
 {
-  "name": "akshay_paladiya",
+  "name": "tennant-calvin",
   "version": "1.0.0",
+  "description": "Week 5 FINAL project",
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
@@ -10,6 +11,5 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.2"
-  },
-  "description": ""
+  }
 }
