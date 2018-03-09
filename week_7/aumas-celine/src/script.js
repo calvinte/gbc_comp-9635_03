@@ -14,8 +14,6 @@ var markers =[];
 
 
 
-
-
 $('#mybutton').click(function(){
     var term = $('#myinput').val();
     console.log(term);
@@ -34,9 +32,9 @@ $('#mybutton').click(function(){
 
         response.response.venues.forEach(function(venue){
           var venueLatLng = new google.maps.LatLng(venue.location.lat, venue.location.lng)
-          var contentString = '<div id="panorama" style="width:200px; height:200px;"></div>'
+          var contentString = '+ <div id="panorama" style="width:200px; height:200px;"></div>'
           var myPanorama = new google.maps.StreetViewPanorama(document.getElementById("#panorama"))
-            position: venueLatLng;
+            position: marker.position;
             pov: (({
               heading: 265,
               pitch: 0
@@ -44,28 +42,25 @@ $('#mybutton').click(function(){
 
 
 
+            /*
 
-            /*function initialize() {
-            var venueLatLng = new google.maps.LatLng(venue.location.lat, venue.location.lng)
-            var map = new google.maps.Map(document.getElementById('panorama'), {
-          center: fenway,
-          zoom: 14
+            function initialize() {
+    var fenway = {lat: 42.345573, lng: -71.098326};
+    var map = new google.maps.Map(document.getElementById('map'), {
+      center: fenway,
+      zoom: 14
+    });
+    var panorama = new google.maps.StreetViewPanorama(
+        document.getElementById('pano'), {
+          position: fenway,
+          pov: {
+            heading: 34,
+            pitch: 10
+          }
         });
-        var myPanorama = new google.maps.StreetViewPanorama(
-            document.getElementById('panorama'), {
-              position: fenway,
-              pov: {
-                heading: 34,
-                pitch: 10
-              }
-            });
-        map.setStreetView(myPanorama);
+    map.setStreetView(panorama);
+  }
       }*/
-
-
-
-
-
 
 
           var marker = new google.maps.Marker({
@@ -94,8 +89,8 @@ $('#mybutton').click(function(){
   });
 
 
-var trafficLayer = new google.maps.TrafficLayer();
-          trafficLayer.setMap(map);
+  var trafficLayer = new google.maps.TrafficLayer();
+  trafficLayer.setMap(map);
 
 
 
