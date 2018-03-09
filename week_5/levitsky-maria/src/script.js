@@ -40,7 +40,7 @@ $(document).ready(function(){
 					infowindow.open(map, marker);
 				})
 //addListener event to view response fields inside #more-info div, using if statement
-    			google.maps.event.addListener(marker, 'mouseover', function (marker, i) {
+    			google.maps.event.addListener(marker, 'click', function (marker, i) {
 				
         		if ($('#more-info').css('display') == 'block') {
            		$('#more-info').css('display', 'none').html("<h2>" + gallery.name + "</h2><br/><p>" + gallery.location.address + "</p>");
