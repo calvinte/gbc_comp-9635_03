@@ -17,7 +17,7 @@ function initializeMap() {
   var toronto = new google.maps.LatLng('43.6532', '-79.3832');
   map = new google.maps.Map(document.getElementById('foursquare-map'), {
     center: toronto,
-    zoom: 10
+    zoom: 12
   });
 }
 
