@@ -1,0 +1,41 @@
+html, body {
+  height:100%;
+  margin: 0;
+  padding: 0;
+}
+
+#foursquare-map{
+  float:left;
+  height:80%;
+  width: 100%;
+  border: 2px solid #00BFFF;
+}
+
+#input-container{
+  float: left;
+  width: 100%;
+  top:0;
+  left:0;
+  right: 0;
+  text-align: center;
+  background-image: url('https://marketplace.canva.com/MACHeQNKcsU/1/thumbnail_large/canva-wooden-background--MACHeQNKcsU.jpg');
+  padding-bottom: 5%;
+}
+
+input{
+  height:20px;
+  width:200px;
+  border:2px solid #00BFFF;
+}
+
+button{
+  width: 100px;
+  font-size: 14px;
+}
+
+h1{
+  font-family: arial;
+  font-size: 20px;
+  color: white;
+
+}

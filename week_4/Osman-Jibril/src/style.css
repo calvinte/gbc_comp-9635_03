@@ -1,0 +1,21 @@
+body{
+background-image: url(pink.png);
+
+}
+
+h3{
+text-align: center;
+text-decoration: underline;
+background-color: white;
+}
+
+img{
+border: black solid 7px;
+width: 500px;
+height: 500px;
+display: inline;
+}
+
+p{
+text-align: center;
+}

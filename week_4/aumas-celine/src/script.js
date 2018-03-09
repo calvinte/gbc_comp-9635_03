@@ -1,8 +1,10 @@
+
+
 $.ajax({
   type:"GET",
   dataType:"jsonp",
   cache:false,
-  url:'https://api.foursquare.com/v2/venues/search?client_id=UYXWDL4J1XESVFDVL4IQS4FKZJVLMCOF0SKNRRWRBBSC0LPE&client_secret=IFYVZGRK3EVI4DF1JEND5ZHC1K15NP5GAZ3NKXPOVCELZQSL&v=20180212&near=Toronto&query=tacos',
+  url:'https://api.foursquare.com/v2/venues/search?client_id=UYXWDL4J1XESVFDVL4IQS4FKZJVLMCOF0SKNRRWRBBSC0LPE&client_secret=IFYVZGRK3EVI4DF1JEND5ZHC1K15NP5GAZ3NKXPOVCELZQSL&v=20180212&near=Toronto&query=coffee',
   success: function(response) {
     console.log(response)
     response.response.venues.forEach(function(restaurantName){
@@ -10,6 +12,10 @@ $.ajax({
       var location =restaurantName.location
       var html = ' <p>'
       html += restaurantName.name
+      html += '<br />'
+      html += restaurantName.location.address
+      html += '<br />'
+      html += restaurantName.location.crossStreet
       html += '<br />'
       //break the image and put it on different lines
       html += '<img src="'
@@ -28,9 +34,3 @@ $.ajax({
       // close the tag because we openned it before
       document.body.innerHTML +=html
     })
-  },
-})
-// call ajax as a function
-// the brackets represent an object literal that will tell the ajax method what we want to go
-// look at HTTP requests
-//response.response.venues get response from venues
