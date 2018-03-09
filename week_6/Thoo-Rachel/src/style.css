@@ -17,7 +17,7 @@ html, body, #foursquare-map {
 	position: absolute;
 	top: 180px;
 	left: 200px;
-	right: 0;
+	right:0;
 }
 
 #map-input input {
@@ -26,6 +26,7 @@ html, body, #foursquare-map {
 	border-radius: 15px;
 	text-align: center;
 	font-style:italic;
+	font-size:18px;
 }
 
 
@@ -37,7 +38,7 @@ html, body, #foursquare-map {
 	font-size: 15px;
 }
 #search{
-	padding-left:300px;
+	text-align: center;
 	color:white;
 	top:10;
 	font-size:50px;

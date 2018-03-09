@@ -2,17 +2,10 @@ var map;
 var markers = [];
 var lastInfoWindow = null
 
-// initialize the map and listen for any clicks to the search button
 $(document).ready(function() {
   initializeMap();
 
-  $('#map-input button').click(function() {
-    var term = $('#map-input input').val();
-    loadMarkersFromTerm(term);
-  });
-});
-
-// function to initialize the map to be seen on the screen
+  // function to initialize the map to be seen on the screen
 function initializeMap() {
   var toronto = new google.maps.LatLng('43.6532', '-79.3832');
   map = new google.maps.Map(document.getElementById('foursquare-map'), {
@@ -20,6 +13,15 @@ function initializeMap() {
     zoom: 12
   });
 }
+
+// initialize the map and listen for any clicks to the search button
+  $('#map-input button').click(function() {
+    var term = $('#map-input input').val();
+    loadMarkersFromTerm(term);
+  });
+});
+
+
 
 // load the markers from the term in the input box
 function loadMarkersFromTerm(term) {
