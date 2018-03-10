@@ -16,12 +16,12 @@ html, body, #foursquare-map {
 
 #map-input input, select{
 	width: 200px;
-	height: 25px;
+	height: 40px;
     border-radius: 5px;
 }
 
 #map-input button {
-	height: 25px;
+	height: 40px;
 	color: white;
 	background-color: #0FA0CE;
 	border-radius: 5px;
