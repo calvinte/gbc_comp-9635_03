@@ -1,0 +1,17 @@
+html, body, #foursquare-map{
+  height:100%;
+  width: 100%;
+}
+
+#input-container{
+  position: absolute;
+  top:0;
+  left:0;
+  right: 0;
+  text-align: center;
+}
+
+input{
+  height:20px;
+  width:200px;
+}

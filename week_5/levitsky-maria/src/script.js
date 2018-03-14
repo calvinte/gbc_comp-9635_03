@@ -211,6 +211,7 @@ $(document).ready(function(){
 //addListener event to view response fields inside #more-info div, using if statement
     			google.maps.event.addListener(marker, 'click', function (marker, i) {
 
+
         if ($('#more-info').css('display') == 'block') {
             $('#more-info').css('display', 'none');
         		}

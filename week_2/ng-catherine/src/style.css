@@ -1,0 +1,8 @@
+#map-canvas {
+	height: 300px;
+	width: 400px;
+}
+
+body {
+	background: linear-gradient(to bottom right, #BFE8DF, #B5EEFF);
+}
