@@ -66,6 +66,8 @@ $('#mybutton').click(function(){
           var marker = new google.maps.Marker({
             map:map,
             position:venueLatLng,
+            animation: google.maps.Animation.DROP,
+
           });
 
           markers.push(marker)
