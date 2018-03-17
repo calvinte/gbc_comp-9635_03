@@ -1,0 +1,28 @@
+html, body, #foursquare-map {
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+
+#map-input {
+	padding: 140px;
+	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+
+#map-input input, select{
+	width: 200px;
+	height: 40px;
+    border-radius: 5px;
+}
+
+#map-input button {
+	height: 40px;
+	color: white;
+	background-color: #0FA0CE;
+	border-radius: 5px;
+}

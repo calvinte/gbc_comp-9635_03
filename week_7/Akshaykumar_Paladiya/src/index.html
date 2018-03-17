@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Store Locator</title>
+		<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		 
+		  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDEZaZXA6vU2TMoN04fMLgYybvfJ4Jp_9w&libraries=places"></script>
+		<script src="/script.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    		<link href="style.css" rel="stylesheet">
+	</head>
+	<body class="container">
+        <h1 class="jumbotron text-center"><img src="images/logo.png" width="100" height="60"/>Store Locator</h1>
+  		<div id="foursquare-map"></div>
+		<div id="map-input">
+			
+			<input id="city_input" class="control" placeholder="Enter City Name" type="text"/>
+			
+			<select id="store_type">
+				<option value="tacos">Tacos</option>
+				<option value="coffee">Coffee</option>
+        <option value="burger">Burger</option>
+        <option value="sandwich">Sandwich</option>
+				<option value="pizza">Pizza</option>
+				<option value="bar">Bars</option>
+			  </select>
+			<button id="mybutton"> Locate Stores </button>
+		</div>
+		
+		<div class="footer">
+			<h1 class="jumbotron text-center">store locator &copy; 2018</h1>
+		</div>
+	</body>
+</html>
